@@ -138,3 +138,42 @@ class HashMap {
     return entriesArray;
   }
 }
+
+const testHashMap = new HashMap();
+
+// Test the set method
+testHashMap.set("name", "Josh");
+testHashMap.set("age", "30");
+testHashMap.set("country", "USA");
+
+console.log("After setting initial values:");
+console.log("Entries:", testHashMap.entries()); // Should show all added entries
+
+// Test the get method
+console.log("Get age:", testHashMap.get("age")); // Should output '30'
+
+// Test updating an existing key
+testHashMap.set("age", "31");
+console.log("Get updated age:", testHashMap.get("age")); // Should output '31'
+
+// Test the has method
+console.log('Has key "name":', testHashMap.has("name")); // Should return true
+console.log('Has key "occupation":', testHashMap.has("occupation")); // Should return false
+
+// Test the remove method
+testHashMap.remove("country");
+console.log('Entries after removing "country":', testHashMap.entries()); // Should not include 'country'
+
+// Test the length method
+console.log("Current size of hash map:", testHashMap.length()); // Should return the current size
+
+// Test the keys method
+console.log("Keys in hash map:", testHashMap.keys()); // Should list all current keys
+
+// Test the values method
+console.log("Values in hash map:", testHashMap.values()); // Should list all current values
+
+// Test the clear method
+testHashMap.clear();
+console.log("Entries after clearing:", testHashMap.entries()); // Should show an empty array
+console.log("Current size after clearing:", testHashMap.length()); // Should be 0
